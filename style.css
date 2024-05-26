@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    margin-bottom: 100px;
 }
 
 .container {
@@ -60,11 +61,14 @@ section {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
     padding: 20px;
     margin-top: 20px;
     color: #fff;
     background-color: #333;
     text-align: center;
+    width: 100%;
 }
 
 h1, h2, h3 {
