@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+	background-color: #181a1b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77b300 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header nav {
+    float: left;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #77b300;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #77b300;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px 0;
+    border-bottom: #77b300 1px solid;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    color: #77b300;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+/* Mobil Görünüm */
+@media screen and (max-width: 768px) {
+    header li {
+        float: none;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
