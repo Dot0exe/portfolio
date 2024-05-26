@@ -3,17 +3,14 @@ body {
 	background-color: #181a1b;
     color: #fff;
     margin: 0;
-    padding: 0;
+    padding-bottom: 150px;
     line-height: 1.6;
-    margin-bottom: 150px;
 }
-
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
-
 header {
     background: #333;
     color: #fff;
@@ -21,45 +18,37 @@ header {
     min-height: 70px;
     border-bottom: #77b300 3px solid;
 }
-
 header a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
-
 header ul {
     padding: 0;
     list-style: none;
 }
-
 header li {
     float: left;
     display: inline;
     padding: 0 20px 0 20px;
 }
-
 header nav {
     float: left;
     margin-top: 10px;
 }
-
 header .highlight, header .current a {
     color: #77b300;
     font-weight: bold;
 }
-
 header a:hover {
     color: #77b300;
     font-weight: bold;
 }
-
 section {
     padding: 20px 0;
     border-bottom: #77b300 1px solid;
 }
-
 footer {
     position: fixed;
     bottom: 0;
@@ -70,29 +59,22 @@ footer {
     text-align: center;
     width: 100%;
 }
-
 h1, h2, h3 {
     margin: 0;
     padding-bottom: 10px;
 }
-
 ul {
     list-style-type: none;
 }
-
 a {
     color: #333;
 }
-
 a:hover {
     color: #77b300;
 }
-
 .project {
     margin-bottom: 20px;
 }
-
-/* Mobil Görünüm */
 @media screen and (max-width: 768px) {
     header li {
         float: none;
