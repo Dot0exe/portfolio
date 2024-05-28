@@ -30,11 +30,71 @@
             <p><strong>E-posta:</strong> <a href="mailto:dot.exe@outlook.com.tr">dot.exe@outlook.com.tr</a></p>
             <p><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/muhammed-ali-sayit-825bb6273/">Muhammed Ali Sayit - LinkedIn</a></p>
         </div>
-    </section>
+	</section>
     <footer>
         <div class="container">
             <p>&copy; 2024 Muhammed Ali Sayit. Tüm hakları saklıdır.</p>
         </div>
     </footer>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			setTimeout(function() {
+				var popup = document.createElement("div");
+				popup.innerHTML = `
+					<div class="container">
+						<div class="form">
+							<form id="ratingForm" action="#" method="post">
+								<label>Değerlendirme:</label><br>
+								<span class="rating">
+									<input type="radio" id="star5" name="rating" value="5" required>
+									<label for="star5" title="Beş yıldız"></label>
+									<input type="radio" id="star4" name="rating" value="4">
+									<label for="star4" title="Dört yıldız"></label>
+									<input type="radio" id="star3" name="rating" value="3">
+									<label for="star3" title="Üç yıldız"></label>
+									<input type="radio" id="star2" name="rating" value="2">
+									<label for="star2" title="İki yıldız"></label>
+									<input type="radio" id="star1" name="rating" value="1">
+									<label for="star1" title="Bir yıldız"></label>
+								</span><br>
+								<input type="submit" id="submitButton" value="Gönder" disabled>
+							</form>
+						</div>
+					</div>
+				`;
+				popup.style.position = "fixed";
+				popup.style.bottom = "10px";
+				popup.style.right = "10px";
+				popup.style.width ="275px";
+				popup.style.padding = "10px";
+				document.body.appendChild(popup);
+	
+				// Gönder düğmesini başlangıçta gri yap
+				var submitButton = document.getElementById("submitButton");
+				submitButton.style.backgroundColor = "#808080";
+	
+				document.addEventListener("change", checkRating);
+	
+
+				document.getElementById("ratingForm").addEventListener("submit", function(event) {
+					event.preventDefault();
+					checkRating();
+					document.getElementById("ratingForm").reset();
+					document.body.removeChild(popup);
+				});
+	
+				function checkRating() {
+					var stars = document.querySelectorAll('input[name="rating"]:checked');
+					if (stars.length > 0) {
+						submitButton.disabled = false;
+						submitButton.style.backgroundColor = "#4CAF50"; // Yeşil
+					} else {
+						submitButton.disabled = true;
+						submitButton.style.backgroundColor = "#808080"; // Gri 
+					}
+				}
+			}, 1500); // popup açılması
+		});
+	</script>
 </body>
 </html>
