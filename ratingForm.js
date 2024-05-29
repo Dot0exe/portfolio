@@ -1,3 +1,13 @@
+function checkRating() {
+	var stars = document.querySelectorAll('input[name="rating"]:checked');
+	if (stars.length > 0) {
+		submitButton.disabled = false;
+		submitButton.style.backgroundColor = "#4CAF50";
+	} else {
+		submitButton.disabled = true;
+		submitButton.style.backgroundColor = "#808080";
+	}
+}
 function showRatingForm() {
 	var hasRated = localStorage.getItem("hasRated");
 
@@ -46,17 +56,9 @@ function showRatingForm() {
 			localStorage.setItem("hasRated", true);
 		});
 
-		function checkRating() {
-			var stars = document.querySelectorAll('input[name="rating"]:checked');
-			if (stars.length > 0) {
-				submitButton.disabled = false;
-				submitButton.style.backgroundColor = "#4CAF50";
-			} else {
-				submitButton.disabled = true;
-				submitButton.style.backgroundColor = "#808080";
-			}
-		}
+
 	}
 }
 
 showRatingForm();
+checkRating()
