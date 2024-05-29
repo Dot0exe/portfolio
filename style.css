@@ -152,14 +152,25 @@ a:hover {
     background-color: #333;
     color: #fff;
 }
+.popup {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 275px;
+    min-width: 275px;
+    padding: 10px;
+}
+
 .rating {
     unicode-bidi: bidi-override;
     direction: rtl;
     text-align: center;
 }
+
 .rating input[type="radio"] {
     display: none;
 }
+
 .rating label {
     display: inline-block;
     padding: 5px;
@@ -167,9 +178,21 @@ a:hover {
     color: #aaa;
     cursor: pointer;
 }
+
 .rating label:before {
     content: '\2605';
 }
-.rating input[type="radio"]:checked ~ label:before {
+
+.rating input[type="radio"]:checked ~ label {
     color: #ffa500;
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    background-color: transparent; /* Arka plan rengi şeffaf */
+    color: #808080; /* Metin rengi */
+    border: none; /* Kenarlık yok */
+    cursor: pointer; /* Fareyi işaretçi yap */
 }
