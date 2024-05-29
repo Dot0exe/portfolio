@@ -42,10 +42,9 @@
     	setTimeout(function() {
         	var popup = document.createElement("div");
         	popup.innerHTML = `
-            	<div class="container">
-            	    <div class="form">
-            	        <form id="ratingForm" action="#" method="post">
-            	            <label>Değerlendirme:</label>
+            	<div class="form">
+            	    <form id="ratingForm" action="#" method="post">
+            	        <label>Değerlendirme:</label>
             	            <span class="rating">
             	                <input type="radio" id="star5" name="rating" value="5" required>
             	                <label for="star5" title="Beş yıldız"></label>
@@ -56,11 +55,10 @@
                         	    <input type="radio" id="star2" name="rating" value="2">
                             	<label for="star2" title="İki yıldız"></label>
                             	<input type="radio" id="star1" name="rating" value="1">
-                            	<label for="star1" title="Bir yıldız"></label>
-                    	    </span><br>
-                    	    <input type="submit" id="submitButton" value="Gönder" disabled>
-                    	</form>
-                	</div>
+                            <label for="star1" title="Bir yıldız"></label>
+                    	</span><br>
+                    <input type="submit" id="submitButton" value="Gönder" disabled>
+                </form>
             </div>`;
         popup.classList.add("popup");
         document.body.appendChild(popup);
