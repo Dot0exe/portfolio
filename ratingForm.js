@@ -1,5 +1,3 @@
-// ratingForm.js
-
 function showRatingForm() {
 	var hasRated = localStorage.getItem("hasRated");
 
